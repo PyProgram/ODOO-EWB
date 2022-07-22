@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="odoo-ewb.invoice_menu"
+        name="Show invoices"
+        action = "odoo-ewb.invoice_show_all_invoice"
+        sequence="0"/>
+        
+    <menuitem
+        id="odoo-ewb.invoice_paid_menu"
+        name="paid Invoices"
+        action = "odoo-ewb.invoice_show_paid_invoice"
+        parent = "odoo-ewb.invoice_menu"
+        sequence="0"/>
+    
+    <menuitem
+        id="odoo-ewb.invoice_unpaid_menu"
+        name="Unpaid Invoices"
+        action = "odoo-ewb.invoice_show_due_invoices"
+        parent = "odoo-ewb.invoice_menu"
+        sequence="1"/>
+
+</odoo>
